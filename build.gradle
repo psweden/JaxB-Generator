@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.eclipse.org/content/repositories/ee4j-releases/' }
+}
+
+dependencies {
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.3'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.3'
+    implementation 'org.glassfish.jaxb:jaxb-xjc:4.0.1'
+    implementation 'org.glassfish.jaxb:jaxb-core:4.0.1'
+    implementation 'javax.activation:javax.activation-api:1.2.0'
+}
+
+task generateSources(type: JavaExec) {
+    main = 'com.sun.tools.xjc.XJCFacade'
+    classpath = configurations.compileClasspath
+    args = ['-d', 'src/main/java', '-p', 'com.example', 'src/main/resources/person.xsd']
+}
+
+compileJava.dependsOn generateSources
