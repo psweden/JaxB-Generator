@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sun.xml.bind.external:relaxng-datatype:4.0.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.sun.xml.bind.external" artifactId="relaxng-datatype" version="4.0.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind.external/relaxng-datatype/4.0.1/e244fe7da374c28f2bb545110527c46d15cfad04/relaxng-datatype-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
